@@ -228,7 +228,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
           )}
         </div>
 
-        {result && (
+        {/* {result && (
           <details className="mt-4 rounded-lg border bg-muted/30 px-4 py-3 text-sm">
             <summary className="cursor-pointer font-medium">Price breakdown</summary>
             <div className="mt-3 space-y-1.5 text-muted-foreground">
@@ -256,7 +256,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
               </div>
             </div>
           </details>
-        )}
+        )} */}
 
         <Button
           variant="cta"

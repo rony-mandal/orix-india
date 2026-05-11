@@ -217,7 +217,7 @@ export const FUEL_TYPES: { id: FuelType; label: string }[] = [
   { id: "electric", label: "Electric" },
 ];
 
-export const SCRAP_RATE_PER_KG = 38; // INR
+export const SCRAP_RATE_PER_KG = 50; // INR
 
 export const CONDITION_LABELS: Record<Condition, string> = {
   excellent: "Excellent",
