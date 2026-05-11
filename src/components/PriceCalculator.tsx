@@ -217,11 +217,6 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
                 <IndianRupee className="h-6 w-6" />
                 {result.min.toLocaleString("en-IN")} – {result.max.toLocaleString("en-IN")}
               </p>
-              {fuel === "diesel" && (
-                <p className="text-xs mt-1 opacity-90 font-medium text-accent-green">
-                  Includes ₹10,000 diesel engine premium
-                </p>
-              )}
               <p className="text-xs opacity-80 mt-2 flex items-center justify-center gap-1">
                 <Info className="h-3 w-3" />
                 Final price may vary after physical inspection
