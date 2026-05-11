@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Recycle, Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 import logo from "@/assets/logo-transparent.png";
 
@@ -57,9 +57,7 @@ export function Footer() {
             Quick Links
           </h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
-            <li><Link to="/calculator" className="hover:text-accent-green">Price Calculator</Link></li>
             <li><Link to="/services" className="hover:text-accent-green">Services</Link></li>
-            <li><Link to="/how-it-works" className="hover:text-accent-green">How It Works</Link></li>
             <li><Link to="/contact" className="hover:text-accent-green">Contact</Link></li>
           </ul>
         </div>

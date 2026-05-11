@@ -8,9 +8,7 @@ import logo from "@/assets/logo-transparent.png";
 
 const navItems = [
   { to: "/", label: "Home" },
-  { to: "/calculator", label: "Price Calculator" },
   { to: "/services", label: "Services" },
-  { to: "/how-it-works", label: "How It Works" },
   { to: "/contact", label: "Contact" },
 ];
 
