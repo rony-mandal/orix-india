@@ -219,6 +219,8 @@ export const FUEL_TYPES: { id: FuelType; label: string }[] = [
 
 export const SCRAP_RATE_PER_KG = 50; // INR
 
+export const DIESEL_BONUS = 10000; // INR premium for diesel vehicles
+
 export const CONDITION_LABELS: Record<Condition, string> = {
   excellent: "Excellent",
   good: "Good",
@@ -257,6 +259,7 @@ export function calculatePrice(opts: {
   modelId?: string;
   year: number;
   condition: Condition;
+  fuelType?: FuelType;
 }): PriceBreakdown {
   const model = opts.modelId ? CAR_MODELS.find((m) => m.id === opts.modelId) : undefined;
   const brand = opts.brand ? CAR_BRANDS.find((b) => b.id === opts.brand) : undefined;
@@ -272,8 +275,13 @@ export function calculatePrice(opts: {
   const conditionAdjustment = afterAge * (conditionFactor - 1);
 
   const estimate = basePrice * ageFactor * conditionFactor;
-  const min = Math.round((estimate * 0.92) / 100) * 100;
-  const max = Math.round((estimate * 1.08) / 100) * 100;
+  const baseMin = Math.round((estimate * 0.92) / 100) * 100;
+  const baseMax = Math.round((estimate * 1.08) / 100) * 100;
+
+  // Diesel vehicles command a ₹10,000 premium
+  const dieselBonus = opts.fuelType === "diesel" ? DIESEL_BONUS : 0;
+  const min = baseMin + dieselBonus;
+  const max = baseMax + dieselBonus;
 
   return {
     weight,

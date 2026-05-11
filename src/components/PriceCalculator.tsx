@@ -59,9 +59,10 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
             modelId,
             year: Number(year),
             condition: condition as Condition,
+            fuelType: (fuel || undefined) as FuelType | undefined,
           })
         : null,
-    [allRequiredFilled, brand, modelId, year, condition],
+    [allRequiredFilled, brand, modelId, year, condition, fuel],
   );
 
   const Wrapper = variant === "card" ? Card : "div";
@@ -216,6 +217,11 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
                 <IndianRupee className="h-6 w-6" />
                 {result.min.toLocaleString("en-IN")} – {result.max.toLocaleString("en-IN")}
               </p>
+              {fuel === "diesel" && (
+                <p className="text-xs mt-1 opacity-90 font-medium text-accent-green">
+                  Includes ₹10,000 diesel engine premium
+                </p>
+              )}
               <p className="text-xs opacity-80 mt-2 flex items-center justify-center gap-1">
                 <Info className="h-3 w-3" />
                 Final price may vary after physical inspection
@@ -227,36 +233,6 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
             </p>
           )}
         </div>
-
-        {/* {result && (
-          <details className="mt-4 rounded-lg border bg-muted/30 px-4 py-3 text-sm">
-            <summary className="cursor-pointer font-medium">Price breakdown</summary>
-            <div className="mt-3 space-y-1.5 text-muted-foreground">
-              <div className="flex justify-between">
-                <span>Vehicle weight</span>
-                <span>{result.weight} kg</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Metal value @ ₹{SCRAP_RATE_PER_KG}/kg</span>
-                <span>{formatINR(result.basePrice)}</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Age adjustment ({MAX_YEAR - Number(year)} yrs)</span>
-                <span className={result.ageAdjustment < 0 ? "text-destructive" : ""}>
-                  {result.ageAdjustment >= 0 ? "+" : ""}
-                  {formatINR(result.ageAdjustment)}
-                </span>
-              </div>
-              <div className="flex justify-between">
-                <span>Condition adjustment</span>
-                <span className={result.conditionAdjustment < 0 ? "text-destructive" : "text-accent-green"}>
-                  {result.conditionAdjustment >= 0 ? "+" : ""}
-                  {formatINR(result.conditionAdjustment)}
-                </span>
-              </div>
-            </div>
-          </details>
-        )} */}
 
         <Button
           variant="cta"

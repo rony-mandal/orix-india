@@ -28,6 +28,7 @@ import {
   CONDITION_LABELS,
   Condition,
   FUEL_TYPES,
+  FuelType,
   YEAR_OPTIONS,
   calculatePrice,
   formatINR,
@@ -100,9 +101,10 @@ export function LeadFormDialog({
             modelId: values.car_model,
             year: Number(values.year),
             condition: values.condition,
+            fuelType: values.fuel_type,
           })
         : null,
-    [breakdownReady, values.brand, values.car_model, values.year, values.condition],
+    [breakdownReady, values.brand, values.car_model, values.year, values.condition, values.fuel_type],
   );
 
   async function handleSubmit(data: LeadInput) {
@@ -361,6 +363,11 @@ export function LeadFormDialog({
                       <p className="text-2xl font-bold text-primary mt-1 font-[Poppins]">
                         {formatINR(breakdown.min)} – {formatINR(breakdown.max)}
                       </p>
+                      {values.fuel_type === "diesel" && (
+                        <p className="text-xs text-accent-green mt-1 font-medium">
+                          Includes ₹10,000 diesel engine premium
+                        </p>
+                      )}
                     </div>
                   )}
                 </div>
@@ -454,6 +461,11 @@ export function LeadFormDialog({
                       <p className="text-3xl font-bold mt-1 font-[Poppins]">
                         {formatINR(breakdown.min)} – {formatINR(breakdown.max)}
                       </p>
+                      {values.fuel_type === "diesel" && (
+                        <p className="text-xs mt-1 opacity-95 font-medium">
+                          Includes ₹10,000 diesel engine premium
+                        </p>
+                      )}
                       <p className="text-xs mt-2 opacity-90">
                         Final price confirmed after physical inspection
                       </p>
