@@ -58,6 +58,7 @@ export function Footer() {
           </h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
             <li><Link to="/services" className="hover:text-accent-green">Services</Link></li>
+            <li><Link to="/about" className="hover:text-accent-green">About Us</Link></li>
             <li><Link to="/contact" className="hover:text-accent-green">Contact</Link></li>
           </ul>
         </div>

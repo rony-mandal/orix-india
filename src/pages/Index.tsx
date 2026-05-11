@@ -7,20 +7,14 @@ import {
   ShieldCheck,
   IndianRupee,
   Truck,
-  Leaf,
-  Banknote,
-  Users,
-  MapPin,
-  Clock,
-  Award,
 } from "lucide-react";
 import { PriceCalculator } from "@/components/PriceCalculator";
 import { TrustBadges } from "@/components/TrustBadges";
 import { Testimonials } from "@/components/Testimonials";
+import { HowItWorksSteps } from "@/components/HowItWorksSteps";
 import { LiveActivity } from "@/components/LiveActivity";
 import { LeadFormDialog } from "@/components/LeadFormDialog";
 import CustomerCarousel from "@/components/CustomerCarousel";
-import { FacilityGallery } from "@/components/FacilityGallery";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
@@ -204,6 +198,21 @@ const Index = () => {
         </div>
       </section>
 
+      {/* HOW IT WORKS */}
+      <section className="bg-gradient-soft border-y">
+        <div className="container py-16 md:py-20">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="inline-block rounded-full bg-accent-green-soft text-accent-green text-xs font-semibold px-3 py-1 uppercase tracking-wide">
+              How It Works
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-3 font-[Poppins]">
+              3 simple steps to get paid
+            </h2>
+          </div>
+          <HowItWorksSteps />
+        </div>
+      </section>
+
       {/* TRUST */}
       <section className="container py-16 md:py-20">
         <div className="text-center max-w-2xl mx-auto mb-10">
@@ -230,122 +239,6 @@ const Index = () => {
             </h2>
           </div>
           <Testimonials />
-        </div>
-      </section>
-
-      {/* ── ABOUT ── */}
-      <section id="about" className="container py-16 md:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* Left: narrative */}
-          <div className="space-y-6">
-            <span className="inline-block rounded-full bg-accent-green-soft text-accent-green text-xs font-semibold px-3 py-1 uppercase tracking-wide">
-              About Us
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold font-[Poppins] leading-tight">
-              India's most trusted{" "}
-              <span className="text-accent-green">car recycling</span> platform
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Founded in Bulandshahar, Car2Scrap was built with one mission: give every car owner
-              a fair, transparent price for their end-of-life vehicle — with zero paperwork hassle
-              and instant payment. What started as a local operation has grown to serve 50+ cities
-              across North India.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              We are a government-authorized vehicle recycling facility operating under MoRTH
-              End-of-Life Vehicle (ELV) guidelines. Every car we accept is responsibly dismantled —
-              hazardous fluids safely disposed of, usable parts re-entering the supply chain,
-              and scrap metal recycled — keeping the environment cleaner one car at a time.
-            </p>
-
-            {/* Value pillars */}
-            <div className="grid sm:grid-cols-3 gap-4 pt-2">
-              {[
-                {
-                  Icon: ShieldCheck,
-                  title: "Govt. authorized",
-                  desc: "Licensed under MoRTH ELV guidelines",
-                },
-                {
-                  Icon: Leaf,
-                  title: "Eco-responsible",
-                  desc: "Zero harmful discharge, certified recycling",
-                },
-                {
-                  Icon: Banknote,
-                  title: "Fair & transparent",
-                  desc: "Weight-based pricing, no hidden cuts",
-                },
-              ].map((v) => (
-                <div
-                  key={v.title}
-                  className="rounded-xl border bg-card p-4 shadow-card hover:shadow-elegant transition-base"
-                >
-                  <v.Icon className="h-6 w-6 text-accent-green mb-3" />
-                  <p className="font-semibold text-sm">{v.title}</p>
-                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{v.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right: stats + certificate badge */}
-          <div className="space-y-5">
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { Icon: Users,         value: "10,000+",  label: "Cars recycled" },
-                { Icon: IndianRupee,   value: "₹4.5 Cr+", label: "Paid to owners" },
-                { Icon: MapPin,        value: "50+",       label: "Cities served" },
-                { Icon: Clock,         value: "24 hrs",    label: "Avg. pickup time" },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="rounded-xl border bg-card p-5 shadow-card flex flex-col gap-3"
-                >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-green-soft text-accent-green">
-                    <s.Icon className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="text-2xl font-bold font-[Poppins] text-accent-green">{s.value}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{s.label}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Certificate callout */}
-            <div className="rounded-xl border bg-gradient-soft p-5 flex items-start gap-4 shadow-card">
-              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-green-soft text-accent-green shrink-0">
-                <Award className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="font-semibold text-sm">MoRTH Registered Recycler</p>
-                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                  Registered at Bharat Scrap Facilities, Sikandarabad Industrial Area, Bulandshahar.
-                  Every vehicle receives a Certificate of Deposit (CoD) after processing.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── GALLERY ── */}
-      <section className="bg-gradient-soft border-y">
-        <div className="container py-16 md:py-20">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="inline-block rounded-full bg-accent-blue-soft text-accent-blue text-xs font-semibold px-3 py-1 uppercase tracking-wide">
-              Our Facility
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-3 font-[Poppins]">
-              See us in action
-            </h2>
-            <p className="text-muted-foreground mt-3">
-              A look inside our government-authorized recycling facility and the cars we've processed.
-            </p>
-          </div>
-          <FacilityGallery />
         </div>
       </section>
 

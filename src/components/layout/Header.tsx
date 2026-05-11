@@ -9,6 +9,7 @@ import logo from "@/assets/logo-transparent.png";
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact" },
 ];
 

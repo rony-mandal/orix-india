@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { ProtectedAdminRoute } from "@/components/ProtectedAdminRoute";
 import Index from "./pages/Index.tsx";
+import About from "./pages/About.tsx";
 import Services from "./pages/Services.tsx";
 import Contact from "./pages/Contact.tsx";
 import Auth from "./pages/Auth.tsx";
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route element={<PublicLayout />}>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
