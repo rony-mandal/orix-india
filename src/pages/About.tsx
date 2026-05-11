@@ -19,7 +19,7 @@ export default function About() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "About Us | Car2Scrap — India's Trusted Car Recycler";
+    document.title = "About Us | Orix India — India's Trusted Car Recycler";
   }, []);
 
   return (

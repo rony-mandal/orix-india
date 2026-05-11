@@ -40,7 +40,7 @@ const SERVICES = [
 export default function Services() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
-    document.title = "Services | Car2Scrap — Scrap, Pickup, RC Cancellation";
+    document.title = "Services | Orix India — Scrap, Pickup, RC Cancellation";
   }, []);
 
   return (

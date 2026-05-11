@@ -18,7 +18,7 @@ export default function Auth() {
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    document.title = "Admin Sign In | Car2Scrap";
+    document.title = "Admin Sign In | Orix India";
   }, []);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export default function Auth() {
             <Recycle className="h-5 w-5" />
           </span>
           <span className="font-[Poppins]">
-            Car<span className="text-accent-green">2</span>Scrap
+            Orix<span className="text-accent-green">India</span>
           </span>
         </Link>
 

@@ -31,7 +31,7 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    document.title = "Contact Us | Car2Scrap";
+    document.title = "Contact Us | Orix India — Talk to Our Team";
   }, []);
 
   const form = useForm<LeadInput>({
@@ -168,7 +168,7 @@ export default function Contact() {
 
           <div className="rounded-xl border overflow-hidden shadow-card aspect-[4/3]">
             <iframe
-              title="car2scrap location"
+              title="Orix India location"
               src={BUSINESS.mapsEmbed}
               className="w-full h-full"
               loading="lazy"

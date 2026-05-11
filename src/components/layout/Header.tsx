@@ -26,7 +26,7 @@ export function Header() {
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img src={logo} className="h-10 w-auto object-contain" />
             <span className="text-lg font-bold font-[Poppins] tracking-tight">
-              Car<span className="text-accent-green">2</span>Scrap
+              ORIX<span className="text-accent-green"> India</span>
             </span>
           </Link>
 
@@ -55,19 +55,19 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             {/* Social icons */}
             <a
-              href="https://www.instagram.com/car2scrap?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
+              href="https://www.instagram.com/orix_india?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow car2scrap on Instagram"
+              aria-label="Follow Orix India on Instagram"
               className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground hover:text-white hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#e6683c] hover:to-[#dc2743] transition-all duration-200"
             >
               <Instagram className="h-4 w-4" />
             </a>
             <a
-              href="https://www.facebook.com/share/1B5hpxZR8V/?mibextid=wwXIfr"
+              href="https://www.facebook.com/share/1CYBq9EBgS/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow car2scrap on Facebook"
+              aria-label="Follow Orix India on Facebook"
               className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground hover:text-white hover:bg-[#1877f2] transition-all duration-200"
             >
               <Facebook className="h-4 w-4" />
@@ -117,7 +117,7 @@ export function Header() {
               {/* Social icons row in mobile menu */}
               <div className="flex items-center gap-2 px-3 pt-2 pb-1">
                 <a
-                  href="https://www.instagram.com/car2scrap?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
+                  href="https://www.instagram.com/orix_india?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -126,7 +126,7 @@ export function Header() {
                   <Instagram className="h-4 w-4" />
                 </a>
                 <a
-                  href="https://www.facebook.com/share/1B5hpxZR8V/?mibextid=wwXIfr"
+                  href="https://www.facebook.com/share/1CYBq9EBgS/?mibextid=wwXIfr"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"

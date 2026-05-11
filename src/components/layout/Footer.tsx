@@ -12,11 +12,11 @@ export function Footer() {
           <Link to="/" className="flex items-center gap-2 font-bold text-lg">
   <img
     src={logo}
-    alt="Car2Scrap Logo"
+    alt="Orix India Logo"
     className="h-9 w-auto object-contain rounded-lg"
   />
   <span className="font-[Poppins]">
-    Car<span className="text-accent-green">2</span>Scrap
+    Orix<span className="text-accent-green"> India</span>
   </span>
 </Link>
           <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
@@ -31,19 +31,19 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/car2scrap?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
+                href="https://www.instagram.com/orix_india?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow car2scrap on Instagram"
+                aria-label="Follow Orix India on Instagram"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#e6683c] hover:to-[#dc2743] transition-all duration-200"
               >
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://www.facebook.com/share/1B5hpxZR8V/?mibextid=wwXIfr"
+                href="https://www.facebook.com/share/1CYBq9EBgS/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow car2scrap on Facebook"
+                aria-label="Follow Orix India on Facebook"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 hover:bg-[#1877f2] transition-all duration-200"
               >
                 <Facebook className="h-4 w-4" />
@@ -103,12 +103,12 @@ export function Footer() {
 
       <div className="border-t border-primary-foreground/10">
         <div className="container py-5 flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-primary-foreground/60">
-          <span>© {new Date().getFullYear()} Car2Scrap. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Orix India. All rights reserved.</span>
           <div className="flex items-center gap-4">
             <span>Govt. authorized vehicle recycling facility</span>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/car2scrap?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
+                href="https://www.instagram.com/orix_india?igsh=MTU0Y2l3aGhyOG9n&utm_source=ig_contact_invite"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -117,7 +117,7 @@ export function Footer() {
                 <Instagram className="h-3.5 w-3.5" />
               </a>
               <a
-                href="https://www.facebook.com/share/1B5hpxZR8V/?mibextid=wwXIfr"
+                href="https://www.facebook.com/share/1CYBq9EBgS/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

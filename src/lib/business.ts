@@ -1,9 +1,9 @@
 export const BUSINESS = {
-  name: "Car2Scrap",
+  name: "Orix India",
   phone: "+919520998320",
   phoneDisplay: "+91 95209 98320",
   whatsapp: "919520998320",
-  email: "car2scrap01@gmail.com",
+  email: "orixindia001@gmail.com",
   address:
     "Gate No.142, Near Testify Rice Mill, Rajarampur, Sikandarabad Industrial Area, Bulandshahar – 203205",
   mapsEmbed:
