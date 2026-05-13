@@ -289,7 +289,7 @@ export default function Contact() {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <Label>Manufacturing year</Label>
+                      <Label>Year</Label>
                       <Select
                         value={values.year ? String(values.year) : ""}
                         onValueChange={(v) =>
@@ -331,7 +331,7 @@ export default function Contact() {
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
+                    {/* <div>
                       <Label htmlFor="c-km">Kilometers driven</Label>
                       <Input
                         id="c-km"
@@ -351,7 +351,7 @@ export default function Contact() {
                         placeholder="e.g. 85000"
                         className="mt-1.5"
                       />
-                    </div>
+                    </div> */}
                     <div>
                       <Label>Fuel type</Label>
                       <Select

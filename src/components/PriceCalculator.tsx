@@ -38,7 +38,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
   const [modelId, setModelId] = useState<string>("");
   const [year, setYear] = useState<number | "">("");
   const [condition, setCondition] = useState<Condition | "">("");
-  const [km, setKm] = useState<string>("");
+  // const [km, setKm] = useState<string>("");
   const [fuel, setFuel] = useState<FuelType | "">("");
   const [notes, setNotes] = useState("");
   const [open, setOpen] = useState(false);
@@ -49,7 +49,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
   );
 
   const allRequiredFilled =
-    !!brand && !!modelId && !!fuel && year !== "" && !!condition && km !== "" && Number(km) >= 0;
+  !!brand && !!modelId && !!fuel && year !== "" && !!condition;
 
   const result = useMemo(
     () =>
@@ -127,7 +127,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
 
           {/* Year */}
           <div>
-            <Label className="text-sm">Manufacturing year</Label>
+            <Label className="text-sm">Year</Label>
             <Select
               value={year === "" ? "" : String(year)}
               onValueChange={(v) => setYear(Number(v))}
@@ -162,7 +162,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
             </Select>
           </div>
 
-          {/* Kilometers driven */}
+          {/* Kilometers driven
           <div>
             <Label className="text-sm">Kilometers driven</Label>
             <Input
@@ -174,7 +174,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
               placeholder="e.g. 85000"
               className="mt-1.5"
             />
-          </div>
+          </div> */}
 
           {/* Fuel type */}
           <div>
@@ -209,7 +209,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
           </div>
         </div>
 
-        <div className="mt-6 rounded-xl bg-gradient-hero text-primary-foreground p-5 text-center">
+        {/* <div className="mt-6 rounded-xl bg-gradient-hero text-primary-foreground p-5 text-center">
           <p className="text-xs uppercase tracking-wide opacity-80">Estimated scrap value</p>
           {result ? (
             <>
@@ -227,17 +227,17 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
               Fill all fields above to see your estimate
             </p>
           )}
-        </div>
+        </div> */}
 
         <Button
-          variant="cta"
-          size="lg"
-          className="w-full mt-4"
-          disabled={!allRequiredFilled}
-          onClick={() => setOpen(true)}
-        >
-          {allRequiredFilled ? "Book Free Pickup at This Price" : "Fill all fields to continue"}
-        </Button>
+  variant="cta"
+  size="lg"
+  className="w-full mt-4"
+  disabled={!allRequiredFilled}
+  onClick={() => setOpen(true)}
+>
+  {allRequiredFilled ? "Book Free Pickup" : "Fill all fields to continue"}
+</Button>
       </Wrapper>
 
       <LeadFormDialog
@@ -250,7 +250,7 @@ export function PriceCalculator({ variant = "card", source = "calculator" }: Pri
           fuel_type: (fuel || undefined) as FuelType | undefined,
           year: year === "" ? undefined : Number(year),
           condition: (condition || undefined) as Condition | undefined,
-          km_driven: km === "" ? undefined : Number(km),
+          // km_driven: km === "" ? undefined : Number(km),
           notes,
         }}
       />

@@ -163,7 +163,7 @@ export function LeadFormDialog({
         "fuel_type",
         "year",
         "condition",
-        "km_driven",
+        // "km_driven",
       ]);
     } else if (step === 1) {
       valid = await form.trigger(["name", "phone", "city"]);
@@ -180,14 +180,9 @@ export function LeadFormDialog({
               <CheckCircle2 className="h-8 w-8 text-accent-green" />
             </div>
             <DialogTitle className="text-2xl">Request Received!</DialogTitle>
-            {breakdown && (
-              <p className="text-muted-foreground">
-                Estimated quote:{" "}
-                <strong className="text-primary">
-                  {formatINR(breakdown.min)} – {formatINR(breakdown.max)}
-                </strong>
-              </p>
-            )}
+            <p className="text-muted-foreground">
+  Our team will review your details and share the best price.
+</p>
             <p className="text-sm text-muted-foreground">
               Our team will call you on <strong>{values.phone}</strong> shortly to confirm pickup.
             </p>
@@ -255,7 +250,7 @@ export function LeadFormDialog({
                   </div>
 
                   <div>
-                    <Label>Manufacturing year</Label>
+                    <Label>Year</Label>
                     <Select
                       value={values.year ? String(values.year) : ""}
                       onValueChange={(v) =>
@@ -296,7 +291,7 @@ export function LeadFormDialog({
                     </Select>
                   </div>
 
-                  <div>
+                  {/* <div>
                     <Label>Kilometers driven</Label>
                     <Input
                       type="number"
@@ -313,7 +308,7 @@ export function LeadFormDialog({
                       placeholder="e.g. 85000"
                       className="mt-1.5"
                     />
-                  </div>
+                  </div> */}
 
                   <div>
                     <Label>Fuel type</Label>
@@ -355,7 +350,7 @@ export function LeadFormDialog({
                     />
                   </div>
 
-                  {breakdown && (
+                  {/* {breakdown && (
                     <div className="sm:col-span-2 rounded-lg bg-gradient-soft border p-4 text-center">
                       <p className="text-xs text-muted-foreground uppercase tracking-wide">
                         Estimated price
@@ -364,7 +359,7 @@ export function LeadFormDialog({
                         {formatINR(breakdown.min)} – {formatINR(breakdown.max)}
                       </p>
                     </div>
-                  )}
+                  )} */}
                 </div>
               )}
 
@@ -440,7 +435,7 @@ export function LeadFormDialog({
                       label="Fuel"
                       value={FUEL_TYPES.find((f) => f.id === values.fuel_type)?.label ?? "—"}
                     />
-                    <Row label="KM driven" value={`${values.km_driven ?? "—"} km`} />
+                    {/* <Row label="KM driven" value={`${values.km_driven ?? "—"} km`} /> */}
                     <Row
                       label="Condition"
                       value={values.condition ? CONDITION_LABELS[values.condition] : "—"}
@@ -448,7 +443,7 @@ export function LeadFormDialog({
                     {values.notes && <Row label="Notes" value={values.notes} />}
                   </div>
 
-                  {breakdown && (
+                  {/* {breakdown && (
                     <div className="rounded-lg bg-gradient-cta text-accent-green-foreground p-5 text-center">
                       <p className="text-xs uppercase tracking-wide opacity-90">
                         Your estimated quote
@@ -460,7 +455,7 @@ export function LeadFormDialog({
                         Final price confirmed after physical inspection
                       </p>
                     </div>
-                  )}
+                  )} */}
                 </div>
               )}
 

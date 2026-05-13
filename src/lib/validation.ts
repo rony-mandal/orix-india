@@ -30,11 +30,11 @@ export const leadSchema = z.object({
   condition: z.enum(["excellent", "good", "poor"], {
     errorMap: () => ({ message: "Select condition" }),
   }),
-  km_driven: z
-    .number()
-    .int()
-    .min(0, "Enter kilometers driven")
-    .max(1_000_000, "Value too high"),
+  // km_driven: z
+  //   .number()
+  //   .int()
+  //   .min(0, "Enter kilometers driven")
+  //   .max(1_000_000, "Value too high"),
   notes: z.string().max(500, "Notes too long").optional().or(z.literal("")),
 });
 

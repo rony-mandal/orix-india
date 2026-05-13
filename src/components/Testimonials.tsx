@@ -12,7 +12,7 @@ const TESTIMONIALS = [
     name: "Meera Joshi",
     city: "Noida",
     quote:
-      "I was worried about RC cancellation paperwork for our old Indica. car2scrap handled everything end-to-end. Super professional.",
+      "I was worried about RC cancellation paperwork for our old Indica. Orix India handled everything end-to-end. Super professional.",
   },
   {
     name: "Ravi Verma",
